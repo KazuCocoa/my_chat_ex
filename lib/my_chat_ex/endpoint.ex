@@ -1,5 +1,5 @@
 defmodule MyChatEx.Endpoint do
-  use Phoenix.Endpoint, otp_app: :myChatEx
+  use Phoenix.Endpoint, otp_app: :my_chat_ex
 
   socket "/socket", MyChatEx.UserSocket
 
@@ -8,7 +8,7 @@ defmodule MyChatEx.Endpoint do
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :myChatEx, gzip: false,
+    at: "/", from: :my_chat_ex, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -35,7 +35,7 @@ defmodule MyChatEx.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_myChatEx_key",
+    key: "_my_chat_ex_key",
     signing_salt: "Gx+3IEnJ"
 
   plug MyChatEx.Router

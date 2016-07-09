@@ -6,11 +6,11 @@
 use Mix.Config
 
 # General application configuration
-config :myChatEx,
+config :my_chat_ex,
   ecto_repos: [MyChatEx.Repo]
 
 # Configures the endpoint
-config :myChatEx, MyChatEx.Endpoint,
+config :my_chat_ex, MyChatEx.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "r9qqJOBvb1aACGRLRO4tPmNZV0y3S7GK9nPnH1ErLXKNBSsiHJTZ7MJJSztbO/kM",
   render_errors: [view: MyChatEx.ErrorView, accepts: ~w(html json)],
