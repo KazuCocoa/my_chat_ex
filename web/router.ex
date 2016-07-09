@@ -7,6 +7,7 @@ defmodule MyChatEx.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :put_user_token
   end
 
   pipeline :api do
@@ -23,4 +24,9 @@ defmodule MyChatEx.Router do
   # scope "/api", MyChatEx do
   #   pipe_through :api
   # end
+
+  defp put_user_token(conn, _) do
+    token = Phoenix.Token.sign(conn, "user", "undefined")
+    assign(conn, :user_token, token)
+  end
 end
