@@ -1,4 +1,4 @@
-# MyChatEx
+# my_chat_ex
 
 To start your Phoenix app:
 
