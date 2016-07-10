@@ -1,6 +1,7 @@
 defmodule MyChatEx.Endpoint do
   use Phoenix.Endpoint, otp_app: :my_chat_ex
 
+  # [GET] /socket/websocket
   socket "/socket", MyChatEx.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.

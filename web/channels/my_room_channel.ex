@@ -13,6 +13,9 @@ defmodule MyChatEx.MyRoomChannel do
   end
 
   def handle_in("new_message", payload, socket) do
+    Logger.debug "new_message"
+    IO.inspect(payload)
+
     with :ok <- broadcast(socket, "new_message", payload) do
       {:noreply, socket}
     else
